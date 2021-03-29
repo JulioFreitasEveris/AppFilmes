@@ -1,5 +1,6 @@
-package com.example.appfilmes.Adicional
+package com.example.appfilmes.vo
 
+import com.google.gson.annotations.SerializedName
 
 
 data class DetalhesDoFilme(
