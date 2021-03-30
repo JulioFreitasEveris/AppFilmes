@@ -1,4 +1,4 @@
-package com.example.appfilmes.Data.Api
+package com.example.appfilmes.Data.api
 
 
 import okhttp3.HttpUrl
@@ -16,9 +16,9 @@ const val BASE_URL = "https://api.themoviedb.org/3/"
 const val POSTER_BASE_URL = "https://image.tmdb.org/t/p/w342"
 
 
-object FilmesDBCliente {
+object TheMovieDBClient {
 
-    fun getCliente(): FilmesDBInterface? {
+    fun getClient(): TheMovieDBInterface? {
 
         val requestInterceptor = Interceptor {chain ->
 
@@ -47,7 +47,7 @@ object FilmesDBCliente {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(FilmesDBInterface::class.java)
+            .create(TheMovieDBInterface::class.java)
 
 
     }

@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppFilmes">
-        <activity android:name=".DetalisFilme.UnicoFilme"></activity>
+        <activity android:name=".Single_movie_details.SingleMovie"></activity>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

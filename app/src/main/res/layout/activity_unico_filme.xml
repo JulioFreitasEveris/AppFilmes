@@ -4,223 +4,229 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalisFilme.UnicoFilme">
+    tools:context=".Single_movie_details.SingleMovie">
+    <?xml version="1.0" encoding="UTF-8"?>
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical">
 
-    <ProgressBar
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:visibility="gone"
-        android:layout_gravity="center"
-        android:id="@+id/progress_bar"/>
-
-    <TextView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:id="@+id/txt_error"
-        android:text="Connection Problem!!"
-        android:gravity="center"/>
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
 
 
-    -<ScrollView
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    app:layout_constraintTop_toTopOf="parent">
+            <ProgressBar android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:id="@+id/progress_bar"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:id="@+id/txt_error"
+                android:text="Connection Problem!!"
+                android:gravity="center"/>
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/linearLayout">
 
-    <ImageView
-        android:layout_height="500dp"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:id="@+id/PosterFilme"
-        android:src="@drawable/placeholder"
-        android:scaleType="matrix"/>
+            <ScrollView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent">
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="8dp">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/tituloFilme"
-        android:text="Filme"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/Filmetagline"
-        android:text="subtitulo"
-        android:textSize="14sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="InfoFilme"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"/>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout">
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Data Lançamento: "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/LancamentoFilme"
-        android:text="2019"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
-
-</LinearLayout>
+                    <ImageView
+                        android:layout_height="500dp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:id="@+id/iv_movie_poster"
+                        android:src="@drawable/placeholder"
+                        android:scaleType="matrix"/>
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Classificação: "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
+                    <LinearLayout
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/classFilme"
-        android:text="8"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/movie_title"
+                            android:text="movie"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
 
-</LinearLayout>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/movie_tagline"
+                            android:text="sub title"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
 
-
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Tempo Duração: "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
-
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/tempoFilme"
-        android:text="2.3 hr"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
-
-</LinearLayout>
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Movie Info"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="15dp"/>
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Valor: "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/valor"
-        android:text="130,000"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="ReleaseD ate: "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp"/>
 
-</LinearLayout>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/movie_release_date"
+                                android:text="2019"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Rating: "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp"/>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/movie_rating"
+                                android:text="8"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+
+                        </LinearLayout>
 
 
-    -<LinearLayout
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Receita: "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Runtime: "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp"/>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/receitaFilme"
-        android:text="130,000"
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/movie_runtime"
+                                android:text="2.3 hr"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+                        </LinearLayout>
 
-</LinearLayout>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Visão Geral "
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:layout_marginTop="2dp"/>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/visaoFilme"
-        android:text="Visão geral ........."
-        android:textSize="12sp"
-        android:layout_marginTop="2dp"/>
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
 
-</LinearLayout>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Budget: "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp"/>
 
-</LinearLayout>
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/movie_budget"
+                                android:text="130,000"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
 
-</ScrollView>
+                        </LinearLayout>
 
-</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                        -
+                        <LinearLayout
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="Revenue: "
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp"/>
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/movie_revenue"
+                                android:text="130,000"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Overview "
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/movie_overview"
+                            android:text="overview ........."
+                            android:textSize="12sp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
