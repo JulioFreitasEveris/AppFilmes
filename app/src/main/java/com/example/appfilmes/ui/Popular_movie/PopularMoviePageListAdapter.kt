@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.activity_single_movie.view.*
 import kotlinx.android.synthetic.main.movie_list_item.view.*
 import kotlinx.android.synthetic.main.network_state_item.view.*
 
-class PopularMoviePageListAdapter(private val context: Context): PagedListAdapter <Movie, RecyclerView.ViewHolder>() {
+class PopularMoviePageListAdapter(private val context: Context): PagedListAdapter <RecyclerView.ViewHolder>() {
         val MOVIE_VIEW_TYPE = 1
         val NETWORK_VIEW_TYPE = 2
 
@@ -128,6 +128,9 @@ class PopularMoviePageListAdapter(private val context: Context): PagedListAdapte
             else{
                 notifyItemInserted(super.getItemCount())
             }
+        }
+        else if (hasExtraRow && previousState != newNetworkState){
+            notifyItemChanged(itemCount-1)
         }
     }
 }
