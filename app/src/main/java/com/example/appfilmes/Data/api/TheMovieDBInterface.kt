@@ -19,3 +19,7 @@ interface TheMovieDBInterface {
    fun getMovieDetails(@Path("movie_id") id: Int): Single<MovieDetails>
     
 }
+
+class MovieResponse {
+
+}

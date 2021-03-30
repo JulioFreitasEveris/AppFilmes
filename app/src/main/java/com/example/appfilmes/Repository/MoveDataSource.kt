@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.appfilmes.Repository
 
 import android.graphics.Movie
