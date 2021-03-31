@@ -1,4 +1,4 @@
-package com.example.appfilmes.ui
+package com.example.appfilmes.vo
 
 import com.google.gson.annotations.SerializedName
 
