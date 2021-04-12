@@ -28,6 +28,9 @@ class SingleMovie : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_movie)
 
+        setActionBar(progress_bar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val movieId: Int = intent.getIntExtra("id",1)
 
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
