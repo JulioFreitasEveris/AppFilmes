@@ -14,7 +14,8 @@
 
         <activity android:name="com.exemplo.AppFilme.ui.single_movie_details.SingleMovie">
         </activity>
-        <activity android:name=".ui.popular_movie.MainActivity">
+        <activity android:name=".ui.popular_movie.MainActivity"
+            android:parentActivityName=".ui.popular_movie.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -12,8 +12,8 @@ import com.exemplo.AppFilme.R
 import com.exemplo.AppFilme.data.api.TheMovieDBClient
 import com.exemplo.AppFilme.data.api.TheMovieDBInterface
 import com.exemplo.AppFilme.data.repository.NetworkState
-import com.oxcoding.AppFilme.ui.popular_movie.PopularMoviePagedListAdapter
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.network_state_item.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
 

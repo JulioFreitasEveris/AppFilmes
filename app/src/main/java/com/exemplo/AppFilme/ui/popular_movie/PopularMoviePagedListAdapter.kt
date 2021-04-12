@@ -1,4 +1,4 @@
-package com.oxcoding.AppFilme.ui.popular_movie
+package com.exemplo.AppFilme.ui.popular_movie
 
 import android.content.Context
 import android.content.Intent
