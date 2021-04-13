@@ -1,14 +1,14 @@
 package com.exemplo.AppFilme.ui.single_movie_details
 
 import androidx.lifecycle.LiveData
-import com.exemplo.AppFilme.data.api.TheMovieDBInterface
+import com.exemplo.AppFilme.data.api.TheMovieInterface
 import com.exemplo.AppFilme.data.repository.MovieDetailsNetworkDataSource
 import com.exemplo.AppFilme.data.repository.NetworkState
 import com.exexplo.AppFilme.data.vo.MovieDetails
 
 import io.reactivex.disposables.CompositeDisposable
 
-class MovieDetailsRepository (private val apiService : TheMovieDBInterface) {
+class MovieDetailsRepository (private val apiService : TheMovieInterface) {
 
     lateinit var movieDetailsNetworkDataSource: MovieDetailsNetworkDataSource
 

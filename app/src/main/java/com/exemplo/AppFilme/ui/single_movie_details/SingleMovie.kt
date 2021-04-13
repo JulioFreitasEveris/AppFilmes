@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.exemplo.AppFilme.R
 import com.exemplo.AppFilme.data.api.POSTER_BASE_URL
 import com.exemplo.AppFilme.data.api.TheMovieDBClient
-import com.exemplo.AppFilme.data.api.TheMovieDBInterface
+import com.exemplo.AppFilme.data.api.TheMovieInterface
 import com.exemplo.AppFilme.data.repository.NetworkState
 import com.exexplo.AppFilme.data.vo.MovieDetails
 import kotlinx.android.synthetic.main.activity_single_movie.*
@@ -33,7 +33,7 @@ class SingleMovie : AppCompatActivity() {
 
         val movieId: Int = intent.getIntExtra("id",1)
 
-        val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
+        val apiService : TheMovieInterface = TheMovieDBClient.getClient()
         movieRepository = MovieDetailsRepository(apiService)
 
         viewModel = getViewModel(movieId)

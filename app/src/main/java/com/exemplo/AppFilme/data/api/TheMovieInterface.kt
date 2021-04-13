@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface TheMovieDBInterface {
+interface TheMovieInterface {
 
     // https://api.themoviedb.org/3/movie/popular?api_key=5e1ae4c60a5ba26389109bd40111a3e6&page=1
     // https://api.themoviedb.org/3/movie/299534?api_key=5e1ae4c60a5ba26389109bd40111a3e6

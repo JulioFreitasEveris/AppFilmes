@@ -4,14 +4,14 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.PageKeyedDataSource
 import com.exemplo.AppFilme.data.api.FIRST_PAGE
-import com.exemplo.AppFilme.data.api.TheMovieDBInterface
+import com.exemplo.AppFilme.data.api.TheMovieInterface
 import com.exemplo.AppFilme.data.vo.Movie
 
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MovieDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: CompositeDisposable)
+class MovieDataSource (private val apiService : TheMovieInterface, private val compositeDisposable: CompositeDisposable)
     : PageKeyedDataSource<Int, Movie>(){
 
     private var page = FIRST_PAGE

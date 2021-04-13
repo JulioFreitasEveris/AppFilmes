@@ -21,7 +21,7 @@ const val POST_PER_PAGE = 20
 
 object TheMovieDBClient {
 
-    fun getClient(): TheMovieDBInterface {
+    fun getClient(): TheMovieInterface {
 
         val requestInterceptor = Interceptor { chain ->
 
@@ -51,7 +51,7 @@ object TheMovieDBClient {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(TheMovieDBInterface::class.java)
+            .create(TheMovieInterface::class.java)
 
     }
 }

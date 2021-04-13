@@ -3,12 +3,12 @@ package com.exemplo.AppFilme.data.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.exemplo.AppFilme.data.api.TheMovieDBInterface
+import com.exemplo.AppFilme.data.api.TheMovieInterface
 import com.exexplo.AppFilme.data.vo.MovieDetails
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class MovieDetailsNetworkDataSource (private val apiService : TheMovieDBInterface, private val compositeDisposable: CompositeDisposable) {
+class MovieDetailsNetworkDataSource (private val apiService : TheMovieInterface, private val compositeDisposable: CompositeDisposable) {
 
     private val _networkState  = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>

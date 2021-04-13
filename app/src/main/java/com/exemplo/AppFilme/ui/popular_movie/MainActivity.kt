@@ -2,7 +2,6 @@ package com.exemplo.AppFilme.ui.popular_movie
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
@@ -11,10 +10,9 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import com.exemplo.AppFilme.R
 import com.exemplo.AppFilme.data.api.TheMovieDBClient
-import com.exemplo.AppFilme.data.api.TheMovieDBInterface
+import com.exemplo.AppFilme.data.api.TheMovieInterface
 import com.exemplo.AppFilme.data.repository.NetworkState
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_single_movie.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val apiService : TheMovieDBInterface = TheMovieDBClient.getClient()
+        val apiService : TheMovieInterface = TheMovieDBClient.getClient()
 
         movieRepository = MoviePagedListRepository(apiService)
 
